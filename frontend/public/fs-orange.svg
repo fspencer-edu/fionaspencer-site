@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.83 265.83">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2f2f2;
+        font-family: AdobeCleanUX-Bold, 'Adobe Clean UX';
+        font-size: 200px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        fill: #fbb03b;
+      }
+
+      .cls-4 {
+        letter-spacing: .02em;
+      }
+
+      .cls-5 {
+        letter-spacing: .03em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <rect class="cls-3" width="265.83" height="265.83" rx="80.11" ry="80.11"/>
+    <text class="cls-1" transform="translate(47.5 198.67)"><tspan class="cls-5" x="0" y="0">f</tspan><tspan class="cls-4" x="65.4" y="0">s</tspan><tspan class="cls-2" x="152.39" y="0">.</tspan></text>
+  </g>
+</svg>
