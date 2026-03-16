@@ -5,45 +5,51 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-10">
+
+      <div className="mx-auto max-w-7xl px-6 py-16">
 
         {/* top section */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-3">
 
           {/* brand */}
           <div>
-            <h2 className="text-xl font-semibold">Fiona Spencer</h2>
-            <p className="mt-2 text-sm text-muted-foreground">
-              Building software, machine learning systems, and modern web applications.
+            <h2 className="font-display text-lg font-semibold tracking-tight">
+              Fiona Spencer
+            </h2>
+
+            <p className="minimal-muted mt-3 max-w-xs">
+              Building software, machine learning systems, and modern web
+              applications.
             </p>
           </div>
 
           {/* navigation */}
           <div>
-            <h3 className="mb-2 text-sm font-semibold uppercase text-muted-foreground">
+            <h3 className="mb-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
               Navigation
             </h3>
 
-            <div className="flex flex-col gap-2 text-sm">
-              <Link to="/" className="hover:text-primary">Home</Link>
-              <Link to="/about" className="hover:text-primary">About</Link>
-              <Link to="/projects" className="hover:text-primary">Projects</Link>
-              <Link to="/contact" className="hover:text-primary">Contact</Link>
+            <div className="flex flex-col gap-3">
+              <Link to="/" className="minimal-link">Home</Link>
+              <Link to="/about" className="minimal-link">About</Link>
+              <Link to="/projects" className="minimal-link">Projects</Link>
+              <Link to="/contact" className="minimal-link">Contact</Link>
             </div>
           </div>
 
           {/* social */}
           <div>
-            <h3 className="mb-2 text-sm font-semibold uppercase text-muted-foreground">
+            <h3 className="mb-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
               Connect
             </h3>
 
-            <div className="flex gap-4 text-lg">
+            <div className="flex gap-5 text-lg text-foreground">
+
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-primary"
+                className="transition-opacity hover:opacity-60"
               >
                 <FontAwesomeIcon icon={faGithub} />
               </a>
@@ -52,21 +58,23 @@ export default function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-primary"
+                className="transition-opacity hover:opacity-60"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
+
             </div>
           </div>
 
         </div>
 
         {/* bottom */}
-        <div className="mt-8 border-t border-border pt-6 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Fiona Spencer. All rights reserved.
+        <div className="mt-14 border-t border-border pt-6 text-xs text-muted-foreground">
+          © {new Date().getFullYear()} Fiona Spencer
         </div>
 
       </div>
+
     </footer>
   )
 }

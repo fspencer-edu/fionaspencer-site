@@ -1,0 +1,22 @@
+:root {
+  /* minimal palette */
+  --color-background: 42 20% 97%;
+  --color-foreground: 220 10% 12%;
+  --color-muted: 220 8% 38%;
+  --color-surface: 0 0% 100%;
+  --color-border: 220 10% 88%;
+  --color-accent: 45 80% 55%;
+  --color-accent-foreground: 220 10% 12%;
+
+  /* typography */
+  --font-display: "Helvetica Neue", "Inter", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  /* shape */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.8rem;
+  --radius-lg: 1.4rem;
+
+  /* shadow */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
