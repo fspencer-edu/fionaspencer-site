@@ -1,1 +1,19 @@
+# Node dependencies
+node_modules/
+
+# Frontend build output
+frontend/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
 .env
+
+# Mac files
+.DS_Store
+
+# Docker
+*.log
