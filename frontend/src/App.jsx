@@ -1,6 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from "react";
-
+import { Button } from "@/components/ui/button"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faRocket } from "@fortawesome/free-solid-svg-icons"
 export default function App() {
   const [message, setMessage] = useState("Loading...");
   const [health, setHealth] = useState("Checking...");
@@ -28,6 +30,7 @@ export default function App() {
           <p className="mb-8 text-gray-300">
             This frontend is served by Nginx, proxied to an Express backend, and
             exposed through Cloudflare Tunnel.
+            hello
           </p>
 
           <div className="space-y-4">
@@ -35,6 +38,9 @@ export default function App() {
               <p className="text-sm text-gray-400">Backend message</p>
               <p className="mt-1 text-lg font-semibold">{message}</p>
             </div>
+
+            <Button className="w-full" onClick={() => alert("Button clicked")} >Text</Button>
+           <FontAwesomeIcon icon={faRocket} className="mr-2"/> 
 
             <div className="rounded-xl bg-gray-800 p-4">
               <p className="text-sm text-gray-400">Backend health</p>
