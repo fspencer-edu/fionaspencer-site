@@ -1,13 +1,23 @@
-version: "3"
+version: "3.9"
 
 services:
-
-  web:
-    image: nginx:alpine
-    container_name: fs-web
-    volumes:
-      - ./index.html:/usr/share/nginx/html/index.html:ro
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: fs-frontend
     restart: unless-stopped
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: fs-backend
+    restart: unless-stopped
+    environment:
+      PORT: 5000
 
   cloudflared:
     image: cloudflare/cloudflared:latest
@@ -15,4 +25,4 @@ services:
     command: tunnel run --token ${TUNNEL_TOKEN}
     restart: unless-stopped
     depends_on:
-      - web
+      - frontend
