@@ -3,55 +3,72 @@ import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
-    <section className="px-6 py-10 md:py-16">
-      <div className="minimal-shell rounded-3xl border border-border">
-        <div className="grid min-h-[78vh] items-center gap-12 px-8 py-12 md:grid-cols-2 md:px-14 md:py-16">
-          <div className="space-y-8">
-            <p className="minimal-link">WELCOME</p>
+    <section className="px-4 py-10 md:py-14">
+      <div className="mx-auto max-w-3xl text-center space-y-8">
 
-            <div className="space-y-5">
-              <h1 className="font-display text-5xl font-bold leading-[0.95] text-foreground md:text-7xl">
-                Build calm,
-                <br />
-                modern digital
-                <br />
-                experiences.
-              </h1>
+        {/* NAME */}
+        <div className="space-y-2">
+          <h1 className="font-display text-3xl font-bold md:text-5xl">
+            Fiona Spencer
+          </h1>
+          <p className="text-sm text-muted-foreground">
+            Toronto, Canada
+          </p>
+        </div>
 
-              <p className="minimal-muted max-w-md text-base md:text-lg">
-                I design and build clean web experiences, software projects,
-                and machine learning applications with a focus on clarity,
-                structure, and thoughtful detail.
-              </p>
-            </div>
+        {/* INFO */}
+        <div className="space-y-4 text-sm md:text-base text-muted-foreground">
+          <p>
+            Computer Science student at Toronto Metropolitan University.
+          </p>
 
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild className="rounded-full px-6">
-                <Link to="/projects">View Projects</Link>
-              </Button>
+          <p>
+            Interested in software development, machine learning, data analysis,
+            and building modern web applications.
+          </p>
 
-              <Button asChild variant="outline" className="rounded-full px-6">
-                <Link to="/contact">Get In Touch</Link>
-              </Button>
-            </div>
-          </div>
+          <p>
+            Experience with Python, Java, JavaScript, React, SQL, and computer
+            vision.
+          </p>
+        </div>
 
-          <div className="relative flex min-h-[420px] items-center justify-center md:min-h-[520px]">
-            <div className="minimal-accent-circle absolute md:h-80 md:w-80" />
+        {/* ACTIONS */}
+        <div className="flex justify-center flex-wrap gap-2">
+          <Button asChild className="rounded-full px-4 py-2 text-sm">
+            <Link to="/projects">Projects</Link>
+          </Button>
 
-            <div className="relative z-10 text-center md:text-right">
-              <p className="mb-4 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                Fiona Spencer
-              </p>
+          <Button asChild variant="outline" className="rounded-full px-4 py-2 text-sm">
+            <Link to="/contact">Contact</Link>
+          </Button>
 
-              <h2 className="font-display text-5xl font-black leading-[0.9] text-foreground md:text-7xl">
-                hello,
-                <br />
-                there.
-              </h2>
-            </div>
+          <Button asChild variant="ghost" className="rounded-full px-4 py-2 text-sm">
+            <a href="https://github.com/fspencer-edu" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </Button>
+
+          <Button asChild variant="ghost" className="rounded-full px-4 py-2 text-sm">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+          </Button>
+        </div>
+
+        {/* PROJECT PREVIEW */}
+        <div className="pt-8 border-t border-border space-y-4">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            Applications
+          </p>
+
+          <div className="flex flex-col gap-2">
+            <Link to="/projects" className="minimal-link">
+              View my projects →
+            </Link>
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -16,10 +16,6 @@ export default function Navbar() {
         {/* desktop navigation */}
         <div className="hidden items-center gap-10 md:flex">
 
-          <Link to="/" className="minimal-link">
-            Home
-          </Link>
-
           <Link to="/about" className="minimal-link">
             About
           </Link>
@@ -28,10 +24,9 @@ export default function Navbar() {
             Contact
           </Link>
 
-          <Link to="/dashboard" className="minimal-link">
-            Dashboard
+          <Link to="/resume" className="minimal-link">
+            Resume
           </Link>
-
         </div>
 
         {/* mobile menu button */}
