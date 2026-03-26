@@ -15,7 +15,7 @@ export default function Footer() {
         {/* icons */}
         <div className="flex justify-center gap-4 text-base text-foreground mb-4">
           <a
-            href="mailto:fionagspenver@gmail.com"
+            href="mailto:fionagspencer@gmail.com"
             className="transition-opacity hover:opacity-60"
           >
             <FontAwesomeIcon icon={faEnvelope} />
@@ -42,7 +42,7 @@ export default function Footer() {
 
         {/* copyright */}
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Fiona Spencer
+          © Fiona Spencer {new Date().getFullYear()} 
         </p>
 
       </div>

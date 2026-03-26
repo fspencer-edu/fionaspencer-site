@@ -7,7 +7,7 @@ export default function Navbar() {
 
         {/* logo */}
         <Link
-          to="/"
+          to="/about"
           className="font-display text-xl font-bold tracking-tight"
         >
           Fiona Spencer
