@@ -5,6 +5,11 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        VITE_EMAILJS_SERVICE_ID: ${VITE_EMAILJS_SERVICE_ID}
+        VITE_EMAILJS_TEMPLATE_CONTACT: ${VITE_EMAILJS_TEMPLATE_CONTACT}
+        VITE_EMAILJS_TEMPLATE_REPLY: ${VITE_EMAILJS_TEMPLATE_REPLY}
+        VITE_EMAILJS_PUBLIC_KEY: ${VITE_EMAILJS_PUBLIC_KEY}
     container_name: fs-frontend
     restart: unless-stopped
     depends_on:
@@ -17,7 +22,9 @@ services:
     container_name: fs-backend
     restart: unless-stopped
     environment:
-      PORT: 5002
+      PORT: ${PORT}
+      MAIL_USERNAME: ${MAIL_USERNAME}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
 
   cloudflared:
     image: cloudflare/cloudflared:latest
