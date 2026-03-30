@@ -10,10 +10,13 @@ services:
         VITE_EMAILJS_TEMPLATE_CONTACT: ${VITE_EMAILJS_TEMPLATE_CONTACT}
         VITE_EMAILJS_TEMPLATE_REPLY: ${VITE_EMAILJS_TEMPLATE_REPLY}
         VITE_EMAILJS_PUBLIC_KEY: ${VITE_EMAILJS_PUBLIC_KEY}
+        VITE_LOGROCKET_ID: ${VITE_LOGROCKET_ID}
     container_name: fs-frontend
     restart: unless-stopped
     depends_on:
       - backend
+    environment:
+      VITE_LOGROCKET_ID: ${VITE_LOGROCKET_ID}
 
   backend:
     build:
@@ -25,6 +28,7 @@ services:
       PORT: ${PORT}
       MAIL_USERNAME: ${MAIL_USERNAME}
       MAIL_PASSWORD: ${MAIL_PASSWORD}
+      SENTRY_DSN: ${SENTRY_DSN}
 
   cloudflared:
     image: cloudflare/cloudflared:latest
