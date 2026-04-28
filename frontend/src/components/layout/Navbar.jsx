@@ -20,6 +20,10 @@ export default function Navbar() {
             About
           </Link>
 
+          <Link to="/projects" className="minimal-link">
+            Projects
+          </Link>
+
           <Link to="/contact" className="minimal-link">
             Contact
           </Link>
