@@ -53,11 +53,11 @@ export default function ContactPage() {
       <div className="space-y-6">
 
         {/* header */}
-        <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+        <div className="space-y-5 ">
+          <p className="text-xs uppercase tracking-[0.2em] text-accent">
             Contact
           </p>
-          <h1 className="text-3xl font-semibold">Get in touch</h1>
+          <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Get in touch</h1>
         </div>
 
         {/* form */}

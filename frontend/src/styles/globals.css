@@ -14,49 +14,54 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 42 35% 98%;
-    --foreground: 222 47% 11%;
+:root {
+  --background: 30 20% 98%;
+  --foreground: 222 20% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 20% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 20% 12%;
 
-    --primary: 222 47% 11%;
-    --primary-foreground: 42 35% 98%;
+  --primary: 222 20% 12%;
+  --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 16% 94%;
-    --secondary-foreground: 222 47% 11%;
+  --secondary: 220 10% 94%;
+  --secondary-foreground: 222 20% 12%;
 
-    --muted: 220 16% 94%;
-    --muted-foreground: 215 16% 45%;
+  --nav: 222 15% 20%;
+  --nav-foreground: 0 0% 100%;
 
-    --accent: 38 92% 55%;
-    --accent-foreground: 222 47% 11%;
+  --muted: 220 10% 94%;
+  --muted-foreground: 220 8% 45%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
+  --accent: 220 5% 20%;
+  --accent-foreground: 222 20% 12%;
 
-    --border: 220 13% 90%;
-    --input: 220 13% 90%;
-    --ring: 38 92% 55%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
 
-    --radius: 1rem;
+  --border: 220 10% 88%;
+  --input: 220 10% 88%;
 
-    --surface: 0 0% 100%;
-    --shadow-soft: 0 18px 50px rgba(15, 23, 42, 0.08);
+  --ring: 220 5% 55%;
 
-    --font-body: "Inter", sans-serif;
-    --font-display: "Poppins", "Inter", sans-serif;
-  }
+  --radius: 1rem;
+
+  --surface: 0 0% 100%;
+
+  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.08);
+
+  --font-body: "Inter", sans-serif;
+  --font-display: "Poppins", "Inter", sans-serif;
+}
 
   .dark {
-    --background: 222 47% 7%;
+    --background: 222 35% 9%;
     --foreground: 210 40% 98%;
 
-    --card: 222 36% 11%;
+    --card: 222 36% 14%;
     --card-foreground: 210 40% 98%;
 
     --popover: 222 36% 11%;
@@ -68,18 +73,21 @@
     --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 72%;
+    --nav: 220 10% 70%;
+    --nav-foreground: 210 20% 96%;
 
-    --accent: 38 92% 55%;
-    --accent-foreground: 222 47% 7%;
+    --muted: 0 5% 80%;
+    --muted-foreground: 0 5% 80%;
+
+    --accent: 0 5% 80%;
+    --accent-foreground: 222 20% 12%;
 
     --destructive: 0 72% 55%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 217 33% 20%;
     --input: 217 33% 20%;
-    --ring: 38 92% 55%;
+    --ring: 217 91% 60%;
 
     --surface: 222 36% 11%;
     --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.35);
@@ -94,9 +102,37 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply text-foreground antialiased;
     font-family: var(--font-body);
     margin: 0;
+
+    background:
+      radial-gradient(
+        circle at 20% 20%,
+        hsl(217 91% 60% / 0.08),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 80%,
+        hsl(260 80% 60% / 0.06),
+        transparent 40%
+      ),
+      hsl(var(--background));
+  }
+
+  .dark body {
+    background:
+      radial-gradient(
+        circle at 20% 20%,
+        hsl(217 91% 60% / 0.15),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 80%,
+        hsl(260 80% 60% / 0.12),
+        transparent 40%
+      ),
+      hsl(var(--background));
   }
 
   h1,
@@ -120,7 +156,7 @@
   }
 
   .minimal-link {
-    @apply text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground transition hover:text-foreground;
+    @apply text-lg font-extrabold uppercase tracking-[0.18em] text-white transition hover:text-foreground;
   }
 
   .minimal-muted {
@@ -140,7 +176,7 @@
   }
 
   .modern-card {
-    @apply rounded-2xl border bg-card/80 shadow-soft backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-xl;
+    @apply rounded-2xl border border-white/10 bg-card/70 p-5 shadow-soft backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-card/80 hover:shadow-xl;
   }
 
   .modern-button {

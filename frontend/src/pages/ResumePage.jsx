@@ -6,11 +6,11 @@ export default function ResumePage() {
       <div className="mx-auto max-w-5xl space-y-4">
         
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <div className="space-y-5 ">
+            <p className="text-xs uppercase tracking-[0.25em] text-accent">
               Resume
             </p>
-            <h1 className="text-2xl font-semibold md:text-3xl">
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl pb-10">
               Fiona Spencer
             </h1>
           </div>

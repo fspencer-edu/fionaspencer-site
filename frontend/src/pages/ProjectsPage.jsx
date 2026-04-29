@@ -5,8 +5,8 @@ function ProjectsPage() {
   return (
     <main className="min-h-screen px-6 py-12 md:px-12">
       <section className="mx-auto max-w-6xl">
-        <div className="mb-10">
-          <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-primary">
+   <div className="space-y-5 text-center md:text-left">
+        <p className="text-xs uppercase tracking-[0.25em] text-accent">
             Portfolio
           </p>
 
@@ -14,7 +14,7 @@ function ProjectsPage() {
             Projects
           </h1>
 
-          <p className="mt-4 max-w-2xl text-muted-foreground">
+          <p className="mt-4 max-w-2xl text-muted-foreground pb-2">
             A collection of projects involving web development, data analysis,
             machine learning, and software engineering.
           </p>

@@ -1,22 +1,24 @@
 :root {
-  /* minimal palette */
-  --color-background: 42 20% 97%;
-  --color-foreground: 220 10% 12%;
-  --color-muted: 220 8% 38%;
+  /* 🎨 modern blue palette */
+  --color-background: 210 40% 98%;
+  --color-foreground: 222 47% 11%;
+  --color-muted: 215 16% 45%;
   --color-surface: 0 0% 100%;
-  --color-border: 220 10% 88%;
-  --color-accent: 45 80% 55%;
-  --color-accent-foreground: 220 10% 12%;
+  --color-border: 214 32% 88%;
 
-  /* typography */
-  --font-display: "Helvetica Neue", "Inter", Arial, sans-serif;
-  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  /* 🔵 accent (blue instead of yellow) */
+  --color-accent: 217 91% 60%;
+  --color-accent-foreground: 0 0% 100%;
 
-  /* shape */
-  --radius-sm: 0.4rem;
-  --radius-md: 0.8rem;
-  --radius-lg: 1.4rem;
+  /* ✨ typography (modern) */
+  --font-display: "Poppins", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
 
-  /* shadow */
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  /* 🔳 shape (slightly more modern rounded) */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+
+  /* 🌫 softer, cooler shadow */
+  --shadow-soft: 0 18px 50px rgba(30, 64, 175, 0.12);
 }
