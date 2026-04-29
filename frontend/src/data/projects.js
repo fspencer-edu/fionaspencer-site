@@ -1,3 +1,5 @@
+import defaultImage from "@/assets/project_images/default_background.jpg";
+
 export const projects = [
   {
     id: "signmap",
@@ -13,7 +15,7 @@ export const projects = [
     ],
     field: "Full-Stack Data Application",
 
-    image: "../src/assets/project_images/default_background.jpg",
+    image: defaultImage,
 
     moreInfo: `
 • Mapping platform to visualize and cluster geospatial CSV data
@@ -41,7 +43,7 @@ export const projects = [
     ],
     field: "Full-Stack Web Application",
 
-    image: "../src/assets/project_images/default_background.jpg",
+    image: defaultImage,
 
     moreInfo: `
 • Full-stack pizza ordering app with customer UI and order management
@@ -67,7 +69,7 @@ export const projects = [
     ],
     field: "Computer Vision + Embedded Systems",
 
-    image: "../src/assets/project_images/default_background.jpg",
+    image: defaultImage,
 
     moreInfo: `
 • Real-time system for image detection and gesture interaction using ESP32
